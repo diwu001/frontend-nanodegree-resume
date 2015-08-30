@@ -24,19 +24,6 @@ h6 {
   padding: 0 5%;
 }
 
-.work-entry p {
-  line-height: 12px;
-  padding-bottom: 10px;
-}
-
-.project-entry p {
-  padding-bottom: 10px;
-}
-
-.education-entry p {
-  padding-bottom: 10px;
-}
-
 #workExperience,
 #projects,
 #education,
@@ -80,7 +67,7 @@ h5 {
   padding:10px 5%;
 }
 
-#header span {
+#currentRole {
   color: white;
 }
 
@@ -104,8 +91,15 @@ p {
   font-size: 14px;
   color: #333;
   line-height: 21px;
+  padding-bottom: 8px;
 }
 
+#workDetail {
+  padding-top: 0px;
+  padding-bottom: 8px;
+  line-height: 12px;
+}
+    
 a {
   color: #1199c3;
   text-decoration: none;
@@ -151,12 +145,12 @@ a {
   clear:both;
 }
 
-.dark-gray {
-  background-color: #4a4a4a;
+.dark-blue {
+  background-color: #29364A;
 }
 
 #header {
-  background-color: #484848;
+  background-color: #29364A;
 }
 
 .flex-box {
@@ -193,6 +187,10 @@ span {
 
 #lets-connect {
   text-align: center;
+}
+
+#projectImage {
+  max-width: 30%;
 }
 
 /* Media queries to handle various device widths */

@@ -58,9 +58,11 @@ h3,
 h4,
 h5 {
   padding:10px 5%;
-
 }
 
+#header span {
+  color: white;
+}
 
 .date-text {
   font-style: italic;
@@ -76,7 +78,6 @@ h5 {
   color: #999;
   line-height: 16px;
   float: right;
-
 }
 
 p {
@@ -102,6 +103,13 @@ a {
 #skills-h3 {
   color: #f5ae23;
   display: none;
+  margin-left: 10px;
+}
+
+.flex-item { 
+ list-style: none;
+ margin-bottom: 3px;
+ margin-left: 10px;
 }
 
 .orange {
@@ -127,7 +135,6 @@ a {
   background-color: #4a4a4a;
 }
 
-/* TODO: Replace with image later */
 #header {
   background-color: #484848;
 }
@@ -186,9 +193,11 @@ span {
   #lets-connect {
     margin-top: 10%;
   }
+    
   .biopic {
     width: 150px;
   }
+    
   .welcome-message {
     display: none;
   }

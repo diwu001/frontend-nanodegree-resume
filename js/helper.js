@@ -1,14 +1,4 @@
 /*
-
-This file contains all of the code running in the background that makes resumeBuilder.js possible. We call these helper functions because they support your code in this course.
-
-Don't worry, you'll learn what's going on in this file throughout the course. You won't need to make any changes to it until you start experimenting with inserting a Google Map in Problem Set 3.
-
-Cameron Pittman
-*/
-
-
-/*
 These are HTML strings. As part of the course, you'll be using JavaScript functions
 replace the %data% placeholder text you see in them.
 */
@@ -69,9 +59,6 @@ $(document).ready(function() {
   });
 });
 
-/*
-The next few lines about clicks are for the Collecting Click Locations quiz in Lesson 2.
-*/
 clickLocations = [];
 
 function logClicks(x,y) {
@@ -87,7 +74,6 @@ function logClicks(x,y) {
 $(document).click(function(loc) {
   logClicks(loc.pageX, loc.pageY);
 });
-
 
 
 /*
@@ -128,14 +114,12 @@ function initializeMap() {
     // adds the single location property from bio to the locations array
     locations.push(bio.contacts.location);
 
-    // iterates through school locations and appends each location to
-    // the locations array
+    // iterates through school locations and appends each location to the locations array
     for (var i = 0; i < education.length; i++) {
       locations.push(education[i].location);
     }
 
-    // iterates through work locations and appends each location to
-    // the locations array
+    // iterates through work locations and appends each location to the locations array
     for (var i = 0; i < work.length; i++) {
       locations.push(work[i].location);
     }
@@ -170,9 +154,7 @@ function initializeMap() {
       content: name
     });
 
-    // hmmmm, I wonder what this is about...
     google.maps.event.addListener(marker, 'click', function() {
-      // your code goes here!
       infoWindow.open(map, marker);
     });
 
@@ -231,15 +213,11 @@ function initializeMap() {
 
 }
 
-/*
-Uncomment the code below when you're ready to implement a Google Map!
-*/
 
 // Calls the initializeMap() function when the page loads
 window.addEventListener('load', initializeMap);
 
-// Vanilla JS way to listen for resizing of the window
-// and adjust map bounds
+// Vanilla JS way to listen for resizing of the window and adjust map bounds
 window.addEventListener('resize', function(e) {
   //Make sure the map bounds get updated on page resize
   map.fitBounds(mapBounds);

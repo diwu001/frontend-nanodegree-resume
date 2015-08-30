@@ -24,6 +24,26 @@ h6 {
   padding: 0 5%;
 }
 
+.work-entry p {
+  line-height: 12px;
+  padding-bottom: 10px;
+}
+
+.project-entry p {
+  padding-bottom: 10px;
+}
+
+.education-entry p {
+  padding-bottom: 10px;
+}
+
+#workExperience,
+#projects,
+#education,
+#mapDiv {
+  padding-top: 10px;
+}
+
 h1 {
   font-size: 40px;
   color: #f5a623;

@@ -85,7 +85,7 @@ function logClicks(x,y) {
 }
 
 $(document).click(function(loc) {
-  // your code goes here!
+  logClicks(loc.pageX, loc.pageY);
 });
 
 
@@ -102,11 +102,11 @@ var map;    // declares a global map variable
 Start here! initializeMap() is called when page is loaded.
 */
 function initializeMap() {
-
+  
   var locations;
 
   var mapOptions = {
-    disableDefaultUI: true
+    zoomControl: true    
   };
 
   /* 
@@ -130,14 +130,14 @@ function initializeMap() {
 
     // iterates through school locations and appends each location to
     // the locations array
-    for (var school in education.schools) {
-      locations.push(education.schools[school].location);
+    for (var i = 0; i < education.length; i++) {
+      locations.push(education[i].location);
     }
 
     // iterates through work locations and appends each location to
     // the locations array
-    for (var job in work.jobs) {
-      locations.push(work.jobs[job].location);
+    for (var i = 0; i < work.length; i++) {
+      locations.push(work[i].location);
     }
 
     return locations;
@@ -173,6 +173,7 @@ function initializeMap() {
     // hmmmm, I wonder what this is about...
     google.maps.event.addListener(marker, 'click', function() {
       // your code goes here!
+      infoWindow.open(map, marker);
     });
 
     // this is where the pin actually gets added to the map.

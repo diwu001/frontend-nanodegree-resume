@@ -1,20 +1,3 @@
-/*
-This is empty on purpose! Your code to build the resume will go here.
- */
-// var HTMLheaderName = '<h1 id="name">%data%</h1>';
-// var HTMLheaderRole = '<span>%data%</span><hr/>';
-
-// var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
-// var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">%data%</span></li>';
-// var HTMLemail = '<li class="flex-item"><span class="orange-text">email</span><span class="white-text">%data%</span></li>';
-// var HTMLtwitter = '<li class="flex-item"><span class="orange-text">twitter</span><span class="white-text">%data%</span></li>';
-// var HTMLgithub = '<li class="flex-item"><span class="orange-text">github</span><span class="white-text">%data%</span></li>';
-// var HTMLblog = '<li class="flex-item"><span class="orange-text">blog</span><span class="white-text">%data%</span></li>';
-// var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></li>';
-
-// var HTMLbioPic = '<img src="%data%" class="biopic">';
-// var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
-
  var bio={
  	"name":"Tina D. Wu",
  	"role":"Software Developer Intern",
@@ -114,9 +97,8 @@ var projects=[{
  	}
 ];
 
-function displayWork()
-{
-	for(item in work){
+work.displayWork = function() {
+	for(var item = 0; item < work.length; item++){
 
 		$("#workExperience").append(HTMLworkStart);
 
@@ -137,9 +119,9 @@ function displayWork()
 	}
 }
 
-displayWork();
+work.displayWork();
 
-projects.display = function() {
+projects.displayProjects = function() {
 
 	for(var i=0;i<projects.length;i++){
 		$("#projects").append(HTMLprojectStart);
@@ -163,10 +145,9 @@ projects.display = function() {
 	}
 }
 
-projects.display();
+projects.displayProjects();
 
-function displayEducation()
-{
+education.displayEducation = function() {
 	for(var i=0;i<education.length;i++)
 	{
 		$("#education").append(HTMLschoolStart);
@@ -187,7 +168,7 @@ function displayEducation()
 	}
 }
 
-displayEducation();
+education.displayEducation();
 
 $("#mapDiv").append(googleMap);
 

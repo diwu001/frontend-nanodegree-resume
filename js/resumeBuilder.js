@@ -105,7 +105,7 @@ bio.display = function() {
       HTMLgithub.replace(data, bio.contacts.github),
       HTMLlinkedin.replace(data, bio.contacts.linkedin),
       HTMLlocation.replace(data, bio.contacts.location));
-}
+};
 
 bio.display();
 
@@ -125,7 +125,7 @@ work.display = function() {
     var description = HTMLworkDescription.replace(data, work[item].description);
     $(".work-entry:last").append(description);
   }
-}
+};
 
 work.display();
 
@@ -142,13 +142,13 @@ projects.display = function() {
     $(".project-entry:last").append(Description);
     var imgLen = projects[i].images.length;
     if (imgLen) {
-      for (var j = 0; j < imgLen; j++) {				
+      for (var j = 0; j < imgLen; j++) {			
         var Formmated_image = HTMLprojectImage.replace(data, projects[i].images[j]);
         $(".project-entry:last").append(Formmated_image);
       }	
     }
   }
-}
+};
 
 projects.display();
 
@@ -168,7 +168,7 @@ education.display = function() {
     var f_major = HTMLschoolMajor.replace(data, education[i].majors);
     $(".education-entry:last").append(f_major);
   }
-}
+};
 
 education.display();
 
